@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OO 재고창고 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>OO 재고창고</h1>
+    <div id="inventory-section">
+        <h2>재고 목록</h2>
+        <ul id="inventory-list"></ul>
+        <button id="request-items">자재 신청</button>
+        <button id="view-request-history">자재 신청 내역확인</button>
+    </div>
+    <div id="add-stock-section">
+        <h2>재고 추가</h2>
+        <label for="password-input">비밀번호:</label>
+        <input type="password" id="password-input">
+        <button id="add-stock-button">재고 선택</button>
+        <button id="view-add-stock-history">재고 추가 내역확인</button>
+    </div>
+    <div id="emergency-contact">
+        <h2>비상 연락망</h2>
+        <p>전화번호: <a href="tel:010-4844-3606">010-4844-3606</a></p>
+    </div>
+    <div id="add-stock-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>재고 선택</h2>
+            <ul id="add-stock-list"></ul>
+            <input type="number" id="add-quantity-input" placeholder="추가할 수량">
+            <button id="final-add-stock-button">재고 추가</button>
+        </div>
+    </div>
+    <div id="employee-id-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>사번 입력</h2>
+            <input type="text" id="employee-id-input" placeholder="사번">
+            <button id="submit-employee-id">확인</button>
+        </div>
+    </div>
+    <div id="request-history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>자재 신청 내역</h2>
+            <ul id="request-history-list"></ul>
+        </div>
+    </div>
+    <div id="add-stock-history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>재고 추가 내역</h2>
+            <ul id="add-stock-history-list"></ul>
+        </div>
+    </div>
+    <script src="inventory.js"></script>
+</body>
+</html>
